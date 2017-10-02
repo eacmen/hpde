@@ -1,3 +1,6 @@
+-- This code is derived from the Auto Sport Labs Race Capture Pro wiki and forums
+-- modifications were made to support multiple Hero4 Session Cameras
+
 STATUS_PREINIT   = 0
 STATUS_INIT_SENT = 1
 STATUS_GOT_IP    = 2
@@ -8,6 +11,7 @@ STATUS_STOPPED   = 6
 
 TRIGGER_STARTING   = 1
 TRIGGER_STOPPING   = 2
+TRIGGER_STARTED    = 3
 
 -- Time to wait after trying to join camera wifi to give up (20 seconds)
 INIT_TIMEOUT = 20000
@@ -15,17 +19,18 @@ INIT_TIMEOUT = 20000
 -- Serial Port WiFi is connected to
 WIFI_SERIAL_PORT = 4
 
+-- List your cameras here
 cameras = {
    { ssid='GoPro1',
      psk='password1',
-     mac="001122334455",
+     mac="d4d9xxxxxxxx",
      status=STATUS_PREINIT,
      init_time=0,
      active=1
    },
    { ssid='GoPro2',
      psk='password2',
-     mac="112233445566",
+     mac="d4d9xxxxxxxx",
      status=STATUS_PREINIT,
      init_time=0,
      active=0
@@ -35,13 +40,11 @@ cameras = {
 -- Number of cameras in above table
 camera_count = 2
 
-
-
 -- Set to 1 if testing GoPros in the garage
 bench_test = 1
 
 --Speed threshold to start recording
-START_SPEED = 10
+START_SPEED = 20
 
 --Speed threshold to stop recording
 STOP_SPEED = 5
@@ -58,7 +61,6 @@ gopro_num_recording = 0
 
 trigger_state = TRIGGER_STOPPING
 
--- WTF LUA indexes start at 0
 active_cam = 1
 
 
@@ -118,6 +120,8 @@ function stop_gopro(cam)
    send_shutter(cam, '00')
 end
 
+-- Sesssion Models require WoL packet, should have no effect
+-- on non-Session models
 function wake_gopro(cam) 
   local macChars = '' 
   for w in string.gmatch(cam.mac, "[0-9A-Za-z][0-9A-Za-z]") do 
@@ -143,9 +147,6 @@ function init_wifi(cam)
   send_AT('AT+CWMODE_CUR=1')
   sleep(1000)
   send_AT('AT+CWJAP_CUR="' ..cam.ssid ..'","' ..cam.psk ..'"')
-  
-  cam.status    = STATUS_INIT_SENT
-  cam.init_time = getUptime( )
 end
 
 function process_incoming(cam)
@@ -164,30 +165,45 @@ function process_incoming(cam)
 end
 
 function set_trigger_state( )
-   local speed = getGpsSpeed( )
 
-   if bench_test == 1 and getUptime( ) < 5000 then
-      trigger_state = TRIGGER_STARTING
+   if trigger_state == TRIGGER_STARTING and gopro_num_recording == camera_count then
+      trigger_state = TRIGGER_STARTED
    end
 
-   if bench_test == 1 and getUpTime( ) > 120000 then
-      trigger_state = TRIGGER_STOPPING
+   if bench_test == 1 then
+      if getUptime( ) < 5000 then
+         trigger_state = TRIGGER_STARTING
       end
 
-   if speed > START_SPEED and bench_test == 0 then
-      trigger_state = TRIGGER_STARTING
-   end
+      if getUpTime( ) > 120000 then
+         trigger_state = TRIGGER_STOPPING
+      end
+      return
+   else
+      local speed = getGpsSpeed( )
 
-   if speed < STOP_SPEED and bench_test == 0 then
-      trigger_state = TRIGGER_STOPPING
+      if speed > START_SPEED and bench_test == 0 and trigger_state != TRIGGER_STARTED then
+         trigger_state = TRIGGER_STARTING
+      end
+
+      if speed < STOP_SPEED and bench_test == 0 then
+         trigger_state = TRIGGER_STOPPING
+      end
    end
 end
 
 function check_gopro()
 
+   set_trigger_state( )
+
+   if trigger_state == TRIGGER_STARTED then
+      return
+   end
+
    if (cameras[active_cam].status == STATUS_RECORDING or cameras[active_cam].status == STATUS_FAIL or cameras[active_cam].status == STATUS_STOPPED) then
       -- we need to move to the next camera
       if cameras[active_cam].status == STATUS_FAIL or cameras[active_cam].status == STATUS_STOPPED then
+         -- lets try this camera again if we can
          cameras[active_cam].status == STATUS_PREINIT
       end
 
@@ -199,10 +215,12 @@ function check_gopro()
 
    if cameras[active_cam].status == STATUS_PREINIT then
       init_wifi(cameras[active_cam])
+      cameras[active_cam].status    = STATUS_INIT_SENT
+      cameras[active_cam].init_time = getUptime( )
       return
    end
 
-   process_incoming(cameras[active_cam])
+   process_incoming(cameras[active_cam]) -- sets GOT_IP or READY state on camera
       
    if cameras[active_cam].status == STATUS_INIT_SENT and getUptime() > cameras[active_cam].init_time + INIT_TIMEOUT then
       log('could not connect to GoPro')
