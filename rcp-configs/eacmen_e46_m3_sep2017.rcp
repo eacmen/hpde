@@ -1,0 +1,1307 @@
+{
+  "rcpCfg": {
+    "analogCfg": {
+      "0": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 5.0,
+        "min": 0.0,
+        "nm": "Analog1",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 0,
+        "ut": "Volts"
+      },
+      "1": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 5.0,
+        "min": 0.0,
+        "nm": "Analog2",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 0,
+        "ut": "Volts"
+      },
+      "2": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 5.0,
+        "min": 0.0,
+        "nm": "Analog3",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 0,
+        "ut": "Volts"
+      },
+      "3": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 5.0,
+        "min": 0.0,
+        "nm": "Analog4",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 0,
+        "ut": "Volts"
+      },
+      "4": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 5.0,
+        "min": 0.0,
+        "nm": "Analog5",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 0,
+        "ut": "Volts"
+      },
+      "5": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 5.0,
+        "min": 0.0,
+        "nm": "Analog6",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 0,
+        "ut": "Volts"
+      },
+      "6": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 5.0,
+        "min": 0.0,
+        "nm": "Analog7",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 0,
+        "ut": "Volts"
+      },
+      "7": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 5.0,
+        "min": 0.0,
+        "nm": "Analog8",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 0,
+        "ut": "Volts"
+      },
+      "8": {
+        "alpha": 1.0,
+        "map": {
+          "raw": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ],
+          "scal": [
+            0.0,
+            1.25,
+            2.5,
+            3.75,
+            5.0
+          ]
+        },
+        "max": 20.0,
+        "min": 0.0,
+        "nm": "Battery",
+        "offset": 0.0,
+        "prec": 2,
+        "scalMod": 1,
+        "scaling": 1.0,
+        "sr": 1,
+        "ut": "Volts"
+      }
+    },
+    "canCfg": {
+      "baud": [
+        500000,
+        500000
+      ],
+      "en": 1,
+      "term": [
+        1,
+        1
+      ]
+    },
+    "canChanCfg": {
+      "chans": [
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 809,
+          "idMask": 0,
+          "len": 1,
+          "max": 100,
+          "min": 0,
+          "mult": 0.39216,
+          "nm": "TPS",
+          "offset": 5,
+          "prec": 0,
+          "sr": 10,
+          "type": 0,
+          "ut": "%"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 809,
+          "idMask": 0,
+          "len": 1,
+          "max": 1,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "BrakeSW",
+          "offset": 55,
+          "prec": 0,
+          "sr": 10,
+          "type": 0,
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 809,
+          "idMask": 0,
+          "len": 1,
+          "max": 1,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "KickdownSW",
+          "offset": 53,
+          "prec": 0,
+          "sr": 10,
+          "type": 0,
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 809,
+          "idMask": 0,
+          "len": 1,
+          "max": 1,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "ClutchSW",
+          "offset": 24,
+          "prec": 0,
+          "sr": 10,
+          "type": 0,
+          "ut": ""
+        },
+        {
+          "add": -48.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 809,
+          "idMask": 0,
+          "len": 1,
+          "max": 300,
+          "min": 0,
+          "mult": 0.75,
+          "nm": "Coolant",
+          "offset": 1,
+          "prec": 0,
+          "sr": 10,
+          "type": 0,
+          "ut": "F"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 1467,
+          "idMask": 0,
+          "len": 4,
+          "max": 1024,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "Bremse",
+          "offset": 4,
+          "prec": 0,
+          "sr": 10,
+          "type": 0,
+          "ut": "PSI"
+        },
+        {
+          "add": -48.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 1,
+          "id": 1349,
+          "idMask": 0,
+          "len": 1,
+          "max": 300,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "OilTemp",
+          "offset": 4,
+          "prec": 0,
+          "sr": 5,
+          "type": 0,
+          "ut": "F"
+        },
+        {
+          "add": -55.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 1,
+          "id": 1083,
+          "idMask": 0,
+          "len": 1,
+          "max": 1024,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "GearboxTemp",
+          "offset": 0,
+          "prec": 0,
+          "sr": 5,
+          "type": 0,
+          "ut": "F"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 790,
+          "idMask": 0,
+          "len": 2,
+          "max": 10000,
+          "min": 0,
+          "mult": 0.15625,
+          "nm": "RPM_CAN",
+          "offset": 2,
+          "prec": 0,
+          "sr": 25,
+          "type": 0,
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 1555,
+          "idMask": 0,
+          "len": 7,
+          "max": 62.83,
+          "min": 0.0,
+          "mult": 1.0,
+          "nm": "FuelLevel",
+          "offset": 17,
+          "prec": 2,
+          "sr": 5,
+          "type": 0,
+          "ut": "Ltrs"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 1,
+          "id": 1557,
+          "idMask": 0,
+          "len": 1,
+          "max": 1024,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "AmbientTemp",
+          "offset": 3,
+          "prec": 0,
+          "sr": 1,
+          "type": 1,
+          "ut": "F"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 501,
+          "idMask": 0,
+          "len": 2,
+          "max": 100,
+          "min": -100,
+          "mult": 0.045,
+          "nm": "Steering",
+          "offset": 0,
+          "prec": 0,
+          "sr": 10,
+          "type": 3,
+          "ut": "%"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 496,
+          "idMask": 0,
+          "len": 12,
+          "max": 1024,
+          "min": 0,
+          "mult": 0.0625,
+          "nm": "LFWheelSpd",
+          "offset": 0,
+          "prec": 0,
+          "sr": 10,
+          "type": 0,
+          "ut": "mph"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 496,
+          "idMask": 0,
+          "len": 12,
+          "max": 200,
+          "min": 0,
+          "mult": 0.0625,
+          "nm": "RFWheelSpd",
+          "offset": 16,
+          "prec": 0,
+          "sr": 10,
+          "type": 0,
+          "ut": "Mph"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 496,
+          "idMask": 0,
+          "len": 12,
+          "max": 200,
+          "min": 0,
+          "mult": 0.0625,
+          "nm": "LRWheelSpd",
+          "offset": 32,
+          "prec": 0,
+          "sr": 10,
+          "type": 0,
+          "ut": "Mph"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": true,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 496,
+          "idMask": 0,
+          "len": 12,
+          "max": 200,
+          "min": 0,
+          "mult": 0.0625,
+          "nm": "RRWheelSpd",
+          "offset": 48,
+          "prec": 0,
+          "sr": 10,
+          "type": 0,
+          "ut": "Mph"
+        }
+      ],
+      "en": 1
+    },
+    "capabilities": {
+      "channels": {
+        "analog": 9,
+        "can": 2,
+        "canChan": 100,
+        "gpio": 3,
+        "imu": 7,
+        "pwm": 0,
+        "timer": 4
+      },
+      "db": {
+        "script": 16384,
+        "tracks": 160
+      },
+      "flags": [
+        "activetrack",
+        "adc",
+        "bt",
+        "can",
+        "can_term",
+        "cell",
+        "gpio",
+        "gps",
+        "imu",
+        "lua",
+        "obd2",
+        "telemstream",
+        "timer",
+        "tracks",
+        "usb",
+        "wifi"
+      ],
+      "sampleRates": {
+        "gps": 50,
+        "sensor": 1000
+      }
+    },
+    "connCfg": {
+      "btCfg": {
+        "btEn": 0,
+        "name": "",
+        "pass": ""
+      },
+      "cellCfg": {
+        "apnHost": "epc.tmobile.com",
+        "apnPass": "",
+        "apnUser": "",
+        "cellEn": 0
+      },
+      "telCfg": {
+        "bgStream": 1,
+        "deviceId": ""
+      }
+    },
+    "gpioCfg": {
+      "0": {
+        "max": 1.0,
+        "min": 0.0,
+        "mode": 0,
+        "nm": "GPIO1",
+        "prec": 1,
+        "sr": 0,
+        "ut": ""
+      },
+      "1": {
+        "max": 1.0,
+        "min": 0.0,
+        "mode": 0,
+        "nm": "GPIO2",
+        "prec": 1,
+        "sr": 0,
+        "ut": ""
+      },
+      "2": {
+        "max": 1.0,
+        "min": 0.0,
+        "mode": 0,
+        "nm": "GPIO3",
+        "prec": 1,
+        "sr": 0,
+        "ut": ""
+      }
+    },
+    "gpsCfg": {
+      "alt": 1,
+      "dist": 1,
+      "dop": 1,
+      "pos": 1,
+      "qual": 1,
+      "sats": 1,
+      "speed": 1,
+      "sr": 10
+    },
+    "imuCfg": {
+      "0": {
+        "alpha": 0.1,
+        "chan": 0,
+        "max": 3.0,
+        "min": -3.0,
+        "mode": 2,
+        "nm": "AccelX",
+        "prec": 2,
+        "sr": 25,
+        "ut": "G",
+        "zeroVal": 1155
+      },
+      "1": {
+        "alpha": 0.1,
+        "chan": 1,
+        "max": 3.0,
+        "min": -3.0,
+        "mode": 1,
+        "nm": "AccelY",
+        "prec": 2,
+        "sr": 25,
+        "ut": "G",
+        "zeroVal": 59
+      },
+      "2": {
+        "alpha": 0.1,
+        "chan": 2,
+        "max": 3.0,
+        "min": -3.0,
+        "mode": 1,
+        "nm": "AccelZ",
+        "prec": 2,
+        "sr": 25,
+        "ut": "G",
+        "zeroVal": 339
+      },
+      "3": {
+        "alpha": 0.1,
+        "chan": 3,
+        "max": 120,
+        "min": -120,
+        "mode": 1,
+        "nm": "Yaw",
+        "prec": 0,
+        "sr": 25,
+        "ut": "Deg/Sec",
+        "zeroVal": -22
+      },
+      "4": {
+        "alpha": 0.1,
+        "chan": 4,
+        "max": 120,
+        "min": -120,
+        "mode": 1,
+        "nm": "Pitch",
+        "prec": 0,
+        "sr": 25,
+        "ut": "Deg/Sec",
+        "zeroVal": 107
+      },
+      "5": {
+        "alpha": 0.1,
+        "chan": 5,
+        "max": 120,
+        "min": -120,
+        "mode": 2,
+        "nm": "Roll",
+        "prec": 0,
+        "sr": 25,
+        "ut": "Deg/Sec",
+        "zeroVal": 14
+      }
+    },
+    "lapCfg": {
+      "currentLap": {
+        "max": 0,
+        "min": 0,
+        "nm": "CurrentLap",
+        "prec": 0,
+        "sr": 10,
+        "ut": ""
+      },
+      "elapsedTime": {
+        "max": 0,
+        "min": 0,
+        "nm": "ElapsedTime",
+        "prec": 4,
+        "sr": 0,
+        "ut": "Min"
+      },
+      "lapCount": {
+        "max": 0,
+        "min": 0,
+        "nm": "LapCount",
+        "prec": 0,
+        "sr": 10,
+        "ut": ""
+      },
+      "lapTime": {
+        "max": 0,
+        "min": 0,
+        "nm": "LapTime",
+        "prec": 4,
+        "sr": 10,
+        "ut": "Min"
+      },
+      "predTime": {
+        "max": 0,
+        "min": 0,
+        "nm": "PredTime",
+        "prec": 4,
+        "sr": 10,
+        "ut": "Min"
+      },
+      "sector": {
+        "max": 0,
+        "min": 0,
+        "nm": "Sector",
+        "prec": 0,
+        "sr": 10,
+        "ut": ""
+      },
+      "sectorTime": {
+        "max": 0,
+        "min": 0,
+        "nm": "SectorTime",
+        "prec": 4,
+        "sr": 10,
+        "ut": "Min"
+      }
+    },
+    "obd2Cfg": {
+      "en": 0,
+      "pids": []
+    },
+    "pwmCfg": {
+      "0": {
+        "logMode": 0,
+        "max": 1000,
+        "min": -1000,
+        "nm": "Unknown",
+        "outMode": 0,
+        "prec": 0,
+        "sr": 0,
+        "stDutyCyc": 0,
+        "stPeriod": 0,
+        "ut": ""
+      },
+      "1": {
+        "logMode": 0,
+        "max": 1000,
+        "min": -1000,
+        "nm": "Unknown",
+        "outMode": 0,
+        "prec": 0,
+        "sr": 0,
+        "stDutyCyc": 0,
+        "stPeriod": 0,
+        "ut": ""
+      },
+      "2": {
+        "logMode": 0,
+        "max": 1000,
+        "min": -1000,
+        "nm": "Unknown",
+        "outMode": 0,
+        "prec": 0,
+        "sr": 0,
+        "stDutyCyc": 0,
+        "stPeriod": 0,
+        "ut": ""
+      },
+      "3": {
+        "logMode": 0,
+        "max": 1000,
+        "min": -1000,
+        "nm": "Unknown",
+        "outMode": 0,
+        "prec": 0,
+        "sr": 0,
+        "stDutyCyc": 0,
+        "stPeriod": 0,
+        "ut": ""
+      }
+    },
+    "scriptCfg": {
+      "data": "-- Log messages from CAN bus\n-- be sure to set the correct baud rate in the CAN settings\n\n-- ID of CAN message to capture and display\n\nCAN_ID = 496 \n--------------------------------------------------\n-- change this to 0 for CAN bus 1, or 1 for CAN bus 2\ncanBus = 0\n--------------------------------------------------\n\n--this function drains all pending CAN messages\n--and outputs messages to the log\nfunction outputCAN()\n   repeat \n      id, ext, data = rxCAN(canBus, 1000)\n      if id ~= nil and id == CAN_ID then\n         print('[' ..id ..']: ')\n         for i = 1,#data do\n            -- y u no have %x rcp?!?\n            print(string.format(\"%d, \", data[i]))\n            --print(data[i] ..', ')\n         end\n         println('')\n      end\n   until id == nil\n   println('Timeout: no CAN data')\nend\n \nfunction onTick()\n   outputCAN()\nend\n\nsetTickRate(60)\n",
+      "page": null
+    },
+    "timerCfg": {
+      "0": {
+        "alpha": 1.0,
+        "max": 10000,
+        "min": 0,
+        "mode": 0,
+        "nm": "RPM",
+        "ppr": 3.0,
+        "prec": 0,
+        "speed": 1,
+        "sr": 50,
+        "st": 0,
+        "ut": ""
+      },
+      "1": {
+        "alpha": 1.0,
+        "max": 8000,
+        "min": 0,
+        "mode": 0,
+        "nm": "RPM2",
+        "ppr": 1.0,
+        "prec": 0,
+        "speed": 1,
+        "sr": 0,
+        "st": 0,
+        "ut": "rpm"
+      },
+      "2": {
+        "alpha": 1.0,
+        "max": 8000,
+        "min": 0,
+        "mode": 0,
+        "nm": "RPM3",
+        "ppr": 1.0,
+        "prec": 0,
+        "speed": 1,
+        "sr": 0,
+        "st": 0,
+        "ut": "rpm"
+      },
+      "3": {
+        "alpha": 1.0,
+        "max": 8000,
+        "min": 0,
+        "mode": 0,
+        "nm": "RPM4",
+        "ppr": 1.0,
+        "prec": 0,
+        "speed": 1,
+        "sr": 0,
+        "st": 0,
+        "ut": "rpm"
+      }
+    },
+    "trackCfg": {
+      "autoDetect": 0,
+      "rad": 0.0001,
+      "track": {
+        "fin": [
+          39.166832,
+          -76.903603
+        ],
+        "id": 1504905436,
+        "sec": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "st": [
+          39.167961,
+          -76.909576
+        ],
+        "type": 1
+      }
+    },
+    "trackDb": {
+      "size": 3,
+      "tracks": [
+        {
+          "id": 1427688071,
+          "sec": [
+            [
+              36.568493,
+              -79.202217
+            ],
+            [
+              36.568237,
+              -79.205139
+            ],
+            [
+              36.567631,
+              -79.20636
+            ],
+            [
+              36.566029,
+              -79.205719
+            ],
+            [
+              36.565769,
+              -79.204391
+            ],
+            [
+              36.564632,
+              -79.204514
+            ],
+            [
+              36.560394,
+              -79.204819
+            ],
+            [
+              36.55867,
+              -79.204559
+            ],
+            [
+              36.555153,
+              -79.205376
+            ],
+            [
+              36.554119,
+              -79.204903
+            ],
+            [
+              36.552361,
+              -79.204262
+            ],
+            [
+              36.552189,
+              -79.205353
+            ],
+            [
+              36.559376,
+              -79.209969
+            ],
+            [
+              36.562237,
+              -79.211922
+            ],
+            [
+              36.563946,
+              -79.211578
+            ],
+            [
+              36.565376,
+              -79.212845
+            ],
+            [
+              36.566444,
+              -79.212563
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "sf": [
+            36.56881,
+            -79.206657
+          ],
+          "type": 0
+        },
+        {
+          "id": 1427688022,
+          "sec": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "sf": [
+            39.235203,
+            -77.969009
+          ],
+          "type": 0
+        },
+        {
+          "id": 1504632296,
+          "sec": [
+            [
+              38.141399,
+              -77.500702
+            ],
+            [
+              38.139149,
+              -77.506287
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          "sf": [
+            38.137711,
+            -77.50351
+          ],
+          "type": 0
+        }
+      ]
+    },
+    "ver": {
+      "bugfix": 0,
+      "fname": "RaceCapture/Pro MK3",
+      "git_info": "2.12.0",
+      "major": 2,
+      "minor": 12,
+      "name": "RCP_MK3"
+    },
+    "wifiCfg": {
+      "active": false,
+      "ap": {
+        "active": false,
+        "channel": 11,
+        "encryption": "none",
+        "password": "",
+        "ssid": "RaceCapture/Pro MK3 934"
+      },
+      "client": {
+        "active": false,
+        "password": "",
+        "ssid": ""
+      }
+    }
+  }
+}
