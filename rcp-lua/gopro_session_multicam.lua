@@ -3,27 +3,27 @@
 
 script_start_time = getUptime( )
 
-STATUS_PREINIT   = 0
-STATUS_INIT_SENT = 1
-STATUS_GOT_IP    = 2
-STATUS_READY     = 3
-STATUS_RECORDING = 4
-STATUS_FAIL      = 5
-STATUS_STOPPED   = 6
+local STATUS_PREINIT   = 0
+local STATUS_INIT_SENT = 1
+local STATUS_GOT_IP    = 2
+local STATUS_READY     = 3
+local STATUS_RECORDING = 4
+local STATUS_FAIL      = 5
+local STATUS_STOPPED   = 6
 
-TRIGGER_INIT       = 0
-TRIGGER_STARTING   = 1
-TRIGGER_STOPPING   = 2
-TRIGGER_STARTED    = 3
+local TRIGGER_INIT       = 0
+local TRIGGER_STARTING   = 1
+local TRIGGER_STOPPING   = 2
+local TRIGGER_STARTED    = 3
 
 -- Time to wait after trying to join camera wifi to give up (20 seconds)
-INIT_TIMEOUT = 20000
+local INIT_TIMEOUT = 20000
 
 -- Serial Port WiFi is connected to
-WIFI_SERIAL_PORT = 4
+local WIFI_SERIAL_PORT = 4
 
 -- List your cameras here
-cameras = {
+local cameras = {
    { ssid='GoPro1',
      psk='password1',
      mac="001122334455",
@@ -39,22 +39,22 @@ cameras = {
 }
 
 -- Number of cameras in above table
-camera_count = 2
+local camera_count = 2
 
 -- Set to 1 if testing GoPros in the garage
-bench_test =  0
+local bench_test =  0
 
 --Speed threshold to start recording
-START_SPEED = 20
+local START_SPEED = 20
 
 --Speed threshold to stop recording
-STOP_SPEED = 5
+local STOP_SPEED = 5
 
 --How fast we check, in Hz
-tickRate = 10
+local tickRate = 10
 
 --Set this to 1 to log communications between RCP & WiFi
-debug = 0
+local debug = 0
 
 gopro_id = addChannel("GoPro", 10, 0, 0, 100, "")
 
@@ -69,33 +69,33 @@ active_cam = 1
 --DO NOT EDIT BELOW
 -----------------------------
 
-function log(msg)
+local function log(msg)
 --   println('[GoProWiFi ' ..tostring(active_cam) ..'] '  ..msg)
 end
 
-function send_crlf()
+local function send_crlf()
   writeCSer(WIFI_SERIAL_PORT, 13)
   writeCSer(WIFI_SERIAL_PORT, 10)
 end
 
-function send_raw(val)
+local function send_raw(val)
   for i=1, #val do
     local c = string.sub(val, i, i)
     writeCSer(WIFI_SERIAL_PORT, string.byte(c))
   end
 end
 
-function send_AT(val)
+local function send_AT(val)
   if debug == 1 then log('send: ' ..val) end
   send_raw(val)
   send_crlf()
 end
 
-function toInt(val)
+local function toInt(val)
   return string.sub(val, 1, -3)
 end
 
-function http_GET(url)
+local function http_GET(url)
   send_AT('AT+CIPSTART="TCP","10.5.5.9",80')
   sleep(500)
   local crlf = string.char(13) ..string.char(10)
@@ -107,23 +107,23 @@ function http_GET(url)
   send_AT("AT+CIPCLOSE") 
 end
 
-function send_shutter(cam, cmd)
+local function send_shutter(cam, cmd)
   http_GET('/bacpac/SH?t=' ..cam.psk ..'&p=%' ..cmd)
 end
 
-function start_gopro(cam)
+local function start_gopro(cam)
 --  log('start GoPro')
   send_shutter(cam, '01')
 end
 
-function stop_gopro(cam)
+local function stop_gopro(cam)
 --   log('stopping GoPro')
    send_shutter(cam, '00')
 end
 
 -- Sesssion Models require WoL packet, should have no effect
 -- on non-Session models
-function wake_gopro(cam) 
+local function wake_gopro(cam) 
   local macChars = '' 
   for w in string.gmatch(cam.mac, "[0-9A-Za-z][0-9A-Za-z]") do 
      macChars = macChars .. string.char(tonumber(w, 16)) 
@@ -140,7 +140,7 @@ function wake_gopro(cam)
   sleep(2000) 
 end
 
-function init_wifi(cam)
+local function init_wifi(cam)
 --  log('initializing')
   send_AT('AT+RST')
   sleep(2000)
@@ -149,7 +149,7 @@ function init_wifi(cam)
   send_AT('AT+CWJAP_CUR="' ..cam.ssid ..'","' ..cam.psk ..'"')
 end
 
-function process_incoming(cam)
+local function process_incoming(cam)
    local line = readSer(WIFI_SERIAL_PORT, 100)
    
    if line ~= '' and debug == 1 then print(line) end
@@ -164,7 +164,7 @@ function process_incoming(cam)
    end
 end
 
-function set_trigger_state( )
+local function set_trigger_state( )
 
    if trigger_state == TRIGGER_STARTING and gopro_num_recording == camera_count then
       trigger_state = TRIGGER_STARTED
@@ -192,7 +192,7 @@ function set_trigger_state( )
    end
 end
 
-function check_gopro()
+local function check_gopro()
 
    set_trigger_state( )
 
