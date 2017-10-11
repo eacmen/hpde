@@ -3,21 +3,23 @@
 
 -- ID of CAN message to capture and display
 
-CAN_ID = 496 
+local CAN_ID = 496 
 --------------------------------------------------
 -- change this to 0 for CAN bus 1, or 1 for CAN bus 2
-canBus = 0
+local canBus = 0
 --------------------------------------------------
 
 --this function drains all pending CAN messages
 --and outputs messages to the log
-function outputCAN()
+local function outputCAN()
    repeat 
-      id, ext, data = rxCAN(canBus, 1000)
+      local id, ext, data = rxCAN(canBus, 1000)
       if id ~= nil and id == CAN_ID then
+         println(string.format("gpsspd: %d uptime: %d", getGpsSpeed( ), getUptime( )))
          print('[' ..id ..']: ')
          for i = 1,#data do
             -- y u no have %x rcp?!?
+
             print(string.format("%d, ", data[i]))
             --print(data[i] ..', ')
          end
