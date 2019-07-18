@@ -61,6 +61,14 @@
         "alert_rules": [],
         "channel": "ElapsedTime"
       },
+      "FLWheelSpd": {
+        "alert_rules": [],
+        "channel": "FLWheelSpd"
+      },
+      "FRWheelSpd": {
+        "alert_rules": [],
+        "channel": "FRWheelSpd"
+      },
       "FuelLevel": {
         "alert_rules": [],
         "channel": "FuelLevel"
@@ -77,6 +85,10 @@
         "alert_rules": [],
         "channel": "GPSSats"
       },
+      "Gear": {
+        "alert_rules": [],
+        "channel": "Gear"
+      },
       "Gsum": {
         "alert_rules": [],
         "channel": "Gsum"
@@ -88,6 +100,10 @@
       "LFwheel": {
         "alert_rules": [],
         "channel": "LFwheel"
+      },
+      "LRWheelSpd": {
+        "alert_rules": [],
+        "channel": "LRWheelSpd"
       },
       "LRwheel": {
         "alert_rules": [],
@@ -109,6 +125,10 @@
         "alert_rules": [],
         "channel": "Longitude"
       },
+      "MK20F0": {
+        "alert_rules": [],
+        "channel": "MK20F0"
+      },
       "MK20F1": {
         "alert_rules": [],
         "channel": "MK20F1"
@@ -124,6 +144,22 @@
       "MK20F4": {
         "alert_rules": [],
         "channel": "MK20F4"
+      },
+      "MK20F5": {
+        "alert_rules": [],
+        "channel": "MK20F5"
+      },
+      "MK20F6": {
+        "alert_rules": [],
+        "channel": "MK20F6"
+      },
+      "MK20F7": {
+        "alert_rules": [],
+        "channel": "MK20F7"
+      },
+      "MK20F8": {
+        "alert_rules": [],
+        "channel": "MK20F8"
       },
       "OilTemp": {
         "alert_rules": [],
@@ -141,6 +177,10 @@
         "alert_rules": [],
         "channel": "RFwheel"
       },
+      "RLWheelSpd": {
+        "alert_rules": [],
+        "channel": "RLWheelSpd"
+      },
       "RPM": {
         "alert_rules": [],
         "channel": "RPM"
@@ -148,6 +188,10 @@
       "RPM_CAN": {
         "alert_rules": [],
         "channel": "RPM_CAN"
+      },
+      "RRWheelSpd": {
+        "alert_rules": [],
+        "channel": "RRWheelSpd"
       },
       "RRwheel": {
         "alert_rules": [],
@@ -177,9 +221,57 @@
         "alert_rules": [],
         "channel": "Steering"
       },
+      "TPMSVolt_LF": {
+        "alert_rules": [],
+        "channel": "TPMSVolt_LF"
+      },
+      "TPMSVolt_LR": {
+        "alert_rules": [],
+        "channel": "TPMSVolt_LR"
+      },
+      "TPMSVolt_RF": {
+        "alert_rules": [],
+        "channel": "TPMSVolt_RF"
+      },
+      "TPMSVolt_RR": {
+        "alert_rules": [],
+        "channel": "TPMSVolt_RR"
+      },
       "TPS": {
         "alert_rules": [],
         "channel": "TPS"
+      },
+      "TPress_LF": {
+        "alert_rules": [],
+        "channel": "TPress_LF"
+      },
+      "TPress_LR": {
+        "alert_rules": [],
+        "channel": "TPress_LR"
+      },
+      "TPress_RF": {
+        "alert_rules": [],
+        "channel": "TPress_RF"
+      },
+      "TPress_RR": {
+        "alert_rules": [],
+        "channel": "TPress_RR"
+      },
+      "TireITmp_LF": {
+        "alert_rules": [],
+        "channel": "TireITmp_LF"
+      },
+      "TireITmp_LR": {
+        "alert_rules": [],
+        "channel": "TireITmp_LR"
+      },
+      "TireITmp_RF": {
+        "alert_rules": [],
+        "channel": "TireITmp_RF"
+      },
+      "TireITmp_RR": {
+        "alert_rules": [],
+        "channel": "TireITmp_RR"
       },
       "Utc": {
         "alert_rules": [],
@@ -214,9 +306,14 @@
         "rc_write_config": "False"
       },
       "preferences": {
+        "config_file_dir": "/Users/peter/Google Drive Personal/M3",
         "conn_type": "Serial",
         "distance_units": "miles",
+        "export_file_dir": "/Users/peter/Documents",
+        "firmware_dir": "/Users/peter/Documents",
         "global_help": "True",
+        "import_datalog_dir": "/Users/peter/Documents",
+        "last_known_device": "/dev/cu.usbmodem00000000011C1",
         "record_session": "1",
         "send_telemetry": "0",
         "show_laptimes": "1",
@@ -545,25 +642,25 @@
           "ut": "%"
         },
         {
-          "add": -48.0,
+          "add": -48.373,
           "bigEndian": false,
           "bm": false,
           "bus": 0,
           "div": 1.0,
-          "filtId": 0,
+          "filtId": 1,
           "id": 809,
           "idMask": 0,
           "len": 1,
-          "max": 255,
-          "min": 0,
-          "mult": 0.69202,
+          "max": 400.0,
+          "min": 0.0,
+          "mult": 0.75,
           "nm": "Coolant",
           "offset": 1,
           "prec": 0,
           "sr": 10,
           "subId": -1,
           "type": 0,
-          "ut": "C"
+          "ut": "F"
         },
         {
           "add": -48.0,
@@ -571,12 +668,12 @@
           "bm": false,
           "bus": 0,
           "div": 1.0,
-          "filtId": 0,
+          "filtId": 1,
           "id": 1349,
           "idMask": 0,
           "len": 1,
-          "max": 255,
-          "min": 0,
+          "max": 420.0,
+          "min": 0.0,
           "mult": 1.0,
           "nm": "OilTemp",
           "offset": 4,
@@ -584,7 +681,7 @@
           "sr": 10,
           "subId": -1,
           "type": 0,
-          "ut": "C"
+          "ut": "F"
         },
         {
           "add": 0.0,
@@ -634,7 +731,7 @@
           "bm": false,
           "bus": 0,
           "div": 1.0,
-          "filtId": 0,
+          "filtId": 1,
           "id": 1557,
           "idMask": 0,
           "len": 1,
@@ -647,7 +744,7 @@
           "sr": 10,
           "subId": -1,
           "type": 3,
-          "ut": "C"
+          "ut": "F"
         },
         {
           "add": 0.0,
@@ -721,11 +818,11 @@
           "filtId": 0,
           "id": 496,
           "idMask": 0,
-          "len": 2,
+          "len": 1,
           "max": 65535,
           "min": 0,
           "mult": 1.0,
-          "nm": "MK20F1",
+          "nm": "MK20F0",
           "offset": 0,
           "prec": 0,
           "sr": 10,
@@ -742,7 +839,28 @@
           "filtId": 0,
           "id": 496,
           "idMask": 0,
-          "len": 2,
+          "len": 1,
+          "max": 65535,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "MK20F1",
+          "offset": 1,
+          "prec": 0,
+          "sr": 10,
+          "subId": -1,
+          "type": 0,
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": true,
+          "bm": false,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 496,
+          "idMask": 0,
+          "len": 1,
           "max": 65535,
           "min": 0,
           "mult": 1.0,
@@ -763,33 +881,12 @@
           "filtId": 0,
           "id": 496,
           "idMask": 0,
-          "len": 2,
+          "len": 1,
           "max": 65535,
           "min": 0,
           "mult": 1.0,
           "nm": "MK20F3",
-          "offset": 4,
-          "prec": 0,
-          "sr": 10,
-          "subId": -1,
-          "type": 0,
-          "ut": ""
-        },
-        {
-          "add": 0.0,
-          "bigEndian": true,
-          "bm": false,
-          "bus": 0,
-          "div": 1.0,
-          "filtId": 0,
-          "id": 496,
-          "idMask": 0,
-          "len": 2,
-          "max": 65535,
-          "min": 0,
-          "mult": 1.0,
-          "nm": "MK20F4",
-          "offset": 6,
+          "offset": 3,
           "prec": 0,
           "sr": 10,
           "subId": -1,
@@ -839,88 +936,340 @@
           "ut": ""
         },
         {
-          "add": -0.3,
-          "bigEndian": false,
-          "bm": true,
-          "bus": 0,
-          "div": 1.0,
+          "add": 0.0,
+          "bigEndian": true,
+          "bm": false,
+          "bus": 1,
+          "div": 6.89476,
           "filtId": 0,
-          "id": 496,
+          "id": 419361843,
           "idMask": 0,
-          "len": 12,
-          "max": 200.0,
-          "min": 0.0,
-          "mult": 0.03884,
-          "nm": "LFwheel",
-          "offset": 0,
-          "prec": 1,
-          "sr": 10,
-          "subId": -1,
+          "len": 2,
+          "max": 50,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "TPress_LF",
+          "offset": 1,
+          "prec": 0,
+          "sr": 1,
+          "subId": 1,
           "type": 0,
-          "ut": "MPH"
+          "ut": "PSI"
         },
         {
-          "add": -0.3,
-          "bigEndian": false,
-          "bm": true,
-          "bus": 0,
-          "div": 1.0,
+          "add": 0.0,
+          "bigEndian": true,
+          "bm": false,
+          "bus": 1,
+          "div": 6.89476,
           "filtId": 0,
-          "id": 496,
+          "id": 419361843,
           "idMask": 0,
-          "len": 12,
-          "max": 200.0,
-          "min": 0.0,
-          "mult": 0.03884,
-          "nm": "RFwheel",
-          "offset": 16,
-          "prec": 1,
-          "sr": 10,
-          "subId": -1,
+          "len": 2,
+          "max": 50,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "TPress_RF",
+          "offset": 1,
+          "prec": 0,
+          "sr": 1,
+          "subId": 2,
           "type": 0,
-          "ut": "MPH"
+          "ut": "PSI"
         },
         {
-          "add": -0.3,
-          "bigEndian": false,
-          "bm": true,
-          "bus": 0,
-          "div": 1.0,
+          "add": 0.0,
+          "bigEndian": true,
+          "bm": false,
+          "bus": 1,
+          "div": 6.89476,
           "filtId": 0,
-          "id": 496,
+          "id": 419361843,
           "idMask": 0,
-          "len": 12,
-          "max": 200.0,
-          "min": 0.0,
-          "mult": 0.03884,
-          "nm": "LRwheel",
-          "offset": 32,
-          "prec": 1,
-          "sr": 10,
-          "subId": -1,
+          "len": 2,
+          "max": 50,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "TPress_LR",
+          "offset": 1,
+          "prec": 0,
+          "sr": 1,
+          "subId": 3,
           "type": 0,
-          "ut": "MPH"
+          "ut": "PSI"
         },
         {
-          "add": -0.3,
+          "add": 0.0,
+          "bigEndian": true,
+          "bm": false,
+          "bus": 1,
+          "div": 6.89476,
+          "filtId": 0,
+          "id": 419361843,
+          "idMask": 0,
+          "len": 2,
+          "max": 50,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "TPress_RR",
+          "offset": 1,
+          "prec": 0,
+          "sr": 1,
+          "subId": 4,
+          "type": 0,
+          "ut": "PSI"
+        },
+        {
+          "add": 0.0,
           "bigEndian": false,
-          "bm": true,
+          "bm": false,
+          "bus": 1,
+          "div": 1.0,
+          "filtId": 1,
+          "id": 419361843,
+          "idMask": 0,
+          "len": 1,
+          "max": 200,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "TireITmp_LF",
+          "offset": 3,
+          "prec": 0,
+          "sr": 1,
+          "subId": 1,
+          "type": 0,
+          "ut": "F"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 1,
+          "div": 1.0,
+          "filtId": 1,
+          "id": 419361843,
+          "idMask": 0,
+          "len": 1,
+          "max": 200,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "TireITmp_RF",
+          "offset": 3,
+          "prec": 0,
+          "sr": 1,
+          "subId": 2,
+          "type": 0,
+          "ut": "F"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 1,
+          "div": 1.0,
+          "filtId": 1,
+          "id": 419361843,
+          "idMask": 0,
+          "len": 1,
+          "max": 200,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "TireITmp_LR",
+          "offset": 3,
+          "prec": 0,
+          "sr": 1,
+          "subId": 3,
+          "type": 0,
+          "ut": "F"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 1,
+          "div": 1.0,
+          "filtId": 1,
+          "id": 419361843,
+          "idMask": 0,
+          "len": 1,
+          "max": 200,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "TireITmp_RR",
+          "offset": 3,
+          "prec": 0,
+          "sr": 1,
+          "subId": 4,
+          "type": 0,
+          "ut": "F"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 1,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 419361843,
+          "idMask": 0,
+          "len": 1,
+          "max": 3.5,
+          "min": 0.0,
+          "mult": 0.1,
+          "nm": "TPMSVolt_LF",
+          "offset": 4,
+          "prec": 1,
+          "sr": 1,
+          "subId": 1,
+          "type": 0,
+          "ut": "V"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 1,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 419361843,
+          "idMask": 0,
+          "len": 1,
+          "max": 3.5,
+          "min": 0.0,
+          "mult": 0.1,
+          "nm": "TPMSVolt_RF",
+          "offset": 4,
+          "prec": 1,
+          "sr": 1,
+          "subId": 2,
+          "type": 0,
+          "ut": "V"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 1,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 419361843,
+          "idMask": 0,
+          "len": 1,
+          "max": 3.5,
+          "min": 0.0,
+          "mult": 0.1,
+          "nm": "TPMSVolt_LR",
+          "offset": 4,
+          "prec": 1,
+          "sr": 1,
+          "subId": 3,
+          "type": 0,
+          "ut": "V"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": false,
+          "bm": false,
+          "bus": 1,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 419361843,
+          "idMask": 0,
+          "len": 1,
+          "max": 3.5,
+          "min": 0.0,
+          "mult": 0.1,
+          "nm": "TPMSVolt_RR",
+          "offset": 4,
+          "prec": 1,
+          "sr": 1,
+          "subId": 4,
+          "type": 0,
+          "ut": "V"
+        },
+        {
+          "add": 0.0,
+          "bigEndian": true,
+          "bm": false,
           "bus": 0,
           "div": 1.0,
           "filtId": 0,
           "id": 496,
           "idMask": 0,
-          "len": 12,
-          "max": 200.0,
-          "min": 0.0,
-          "mult": 0.03886,
-          "nm": "RRwheel",
-          "offset": 48,
-          "prec": 1,
-          "sr": 10,
+          "len": 1,
+          "max": 255,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "MK20F4",
+          "offset": 4,
+          "prec": 0,
+          "sr": 1,
           "subId": -1,
           "type": 0,
-          "ut": "MPH"
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": true,
+          "bm": false,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 496,
+          "idMask": 0,
+          "len": 1,
+          "max": 255,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "MK20F5",
+          "offset": 5,
+          "prec": 0,
+          "sr": 1,
+          "subId": -1,
+          "type": 0,
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": true,
+          "bm": false,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 496,
+          "idMask": 0,
+          "len": 1,
+          "max": 255,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "MK20F6",
+          "offset": 6,
+          "prec": 0,
+          "sr": 1,
+          "subId": -1,
+          "type": 0,
+          "ut": ""
+        },
+        {
+          "add": 0.0,
+          "bigEndian": true,
+          "bm": false,
+          "bus": 0,
+          "div": 1.0,
+          "filtId": 0,
+          "id": 496,
+          "idMask": 0,
+          "len": 1,
+          "max": 255,
+          "min": 0,
+          "mult": 1.0,
+          "nm": "MK20F7",
+          "offset": 7,
+          "prec": 0,
+          "sr": 1,
+          "subId": -1,
+          "type": 0,
+          "ut": ""
         }
       ],
       "en": 1
@@ -977,8 +1326,8 @@
         "cellEn": 0
       },
       "telCfg": {
-        "bgStream": 1,       
-        "deviceId": "xxxxxx"
+        "bgStream": 1,
+        "deviceId": "zzzzzz"
       }
     },
     "gpioCfg": {
@@ -1214,7 +1563,7 @@
       }
     },
     "scriptCfg": {
-      "data": "setTickRate(10)\n\nfunction onTick()\n  plus = getChannel(\"CruisePlus\") \n  if plus == 1.0 then\n    txButton(1, 1)\n  end\n  minus = getChannel(\"CruiseMinus\")\n  if minus == 1.0 then\n    txButton(0, 1)\n  end\nend\n\n",
+      "data": "setTickRate(30)\nsxSetConfig(1,0,1)\nsxCfgLinearGraph(0,0,0,8400)\n\nsxSetLinearThresh(0,0,1000,0,255,0,0)  --green at 4000 RPM\nsxSetLinearThresh(1,0,6000,0,0,255,0)  --blue at 6000 RPM\nsxSetLinearThresh(2,0,7800,255,0,0,10) --red+flash at 7800 RPM\n\n--configure first alert (right LED) as coolant temperature (F)\nsxSetAlertThresh(0,0,205,225,255,0,0) --yellow warning at 205F\nsxSetAlertThresh(0,1,225,255,0,0,10) -- red flash at 225F\n\n--configure first alert (right LED) as oil temperature (F)\nsxSetAlertThresh(1,0,245, 255,255,0,0) --yellow warning at 245F\nsxSetAlertThresh(1,1,260, 255,0,0,10) -- red flash at 260F\n\nflWheelId = addChannel(\"FLWheelSpd\", 10, 0, 0, 200, \"MPH\")\nfrWheelId = addChannel(\"FRWheelSpd\", 10, 0, 0, 200, \"MPH\")\nrlWheelId = addChannel(\"RLWheelSpd\", 10, 0, 0, 200, \"MPH\")\nrrWheelId = addChannel(\"RRWheelSpd\", 10, 0, 0, 200, \"MPH\")\n\nfunction processWheel(id, dataLow, dataHigh)\n  --wheel speed is 13 bits long, little endian\n  --low byte high byte\n  --76543210 76543210\n  --11111111 11111XXX\n  if dataLow == nil or dataHigh == nil then\n    return\n  end\n  local highByte = bit.band(dataHigh, 0x1F)\n  local lowByte = dataLow\n  local value = highByte * 256 + lowByte\n  -- convert to kph then to mph\n  value = value * 0.0625 * 0.621371 \n  setChannel(id, value)\n  --println(\"whl spd\" ..value)\nend\n\n--create gear channel\ngearId = addChannel(\"Gear\", 10, 0, 0, 6)\n\nfunction onTick()\n  processWheel(flWheelId, getChannel(\"MK20F0\"), getChannel(\"MK20F1\"))\n  processWheel(frWheelId, getChannel(\"MK20F2\"), getChannel(\"MK20F3\"))\n  processWheel(rlWheelId, getChannel(\"MK20F4\"), getChannel(\"MK20F5\"))\n  processWheel(rrWheelId, getChannel(\"MK20F6\"), getChannel(\"MK20F7\"))\n\n  sxUpdateLinearGraph(getChannel(\"RPM\"))\n\n  --update engine temp alert\n  sxUpdateAlert(0, getChannel(\"Coolant\"))\n\n  --update oil pressure alert\n  sxUpdateAlert(1, getChannel(\"OilTemp\"))\n  plus = getChannel(\"CruisePlus\") \n  if plus == 1.0 then\n    txButton(1, 1)\n  end\n  minus = getChannel(\"CruiseMinus\")\n  if minus == 1.0 then\n    txButton(0, 1) \n  end\n\n  -- calculate gear: tire diameter(cm), final gear ratio, individual gear ratios 1-6\n  local gear = calcGear(65.262, 3.62, 4.23, 2.53, 1.67, 1.23, 1.0, 0.83)\n  if gear == nil then\n     gear = 0\n  end\n  setChannel(gearId, gear)\n  sxSetDisplay(0, gear)\nend\n\n",
       "page": null
     },
     "sdLogCtrlCfg": {
@@ -1485,8 +1834,8 @@
       },
       "client": {
         "active": true,
-        "password": "h4h4uran00b",
-        "ssid": "cliffjumper"
+        "password": "xxxxx",
+        "ssid": "xxxxxxxx"
       }
     }
   }
