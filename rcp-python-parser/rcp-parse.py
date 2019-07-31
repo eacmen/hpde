@@ -8,8 +8,8 @@ import struct
 from sympy import *
 from sympy.parsing.sympy_parser import parse_expr
 
-MATH_CHANNELS = [ ("Math_Roll", -180, 180, "rad", 10, "atan(AccelY/sqrt(AccelX**2 + AccelZ**2))"),
-                  ("Math_Roll2", -180, 180, "rad", 10, "atan2(AccelX, AccelZ)")]
+MATH_CHANNELS = [ ("Math_Roll", -180, 180, "rad", 10, "(180/pi) * atan2(AccelX, sqrt(AccelY**2 + AccelZ**2))"),
+                  ("Math_Roll2", -180, 180, "rad", 10, "(180/pi) * atan2(AccelX, AccelZ)")]
 
 
 
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     print("Name\tMin\tMax\tAvg")
     for name, stats in heading_stats.items( ):
         (min, max, avg) = stats
-        print(f"{name}\t{min}\t{max}\t{avg}")
+        print(f"{name}\t{min:.02f}\t{max:.02f}\t{avg:.02f}")
 """
     for name,min,max,units,rate,eqn in MATH_CHANNELS:
         expr = parse_expr(eqn, evaluate=False)
