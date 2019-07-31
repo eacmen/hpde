@@ -8,7 +8,8 @@ import struct
 from sympy import *
 from sympy.parsing.sympy_parser import parse_expr
 
-MATH_CHANNELS = [ ("Math_Roll", -180, 180, "deg", 10, "180 * atan(AccelY/sqrt(AccelX**2 + AccelZ**2))/pi"), ]
+MATH_CHANNELS = [ ("Math_Roll", -180, 180, "rad", 10, "atan(AccelY/sqrt(AccelX**2 + AccelZ**2))"),
+                  ("Math_Roll2", -180, 180, "rad", 10, "atan2(AccelX, AccelZ)")]
 
 
 
